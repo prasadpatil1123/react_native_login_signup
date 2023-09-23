@@ -1,9 +1,9 @@
-import { View, Text,Touchable, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Background from './Background'
 import { darkGreen } from './Constants'
-import Btn from './Btn'
 import Field from './Field';
+import Btn from './Btn'
 
 const Login = (props) => {
     return (
@@ -58,7 +58,16 @@ const Login = (props) => {
                             Forgot Password ?
                         </Text>
                     </View>
-                    <Btn textColor='white' bgColor={darkGreen} btnLabel="Login" Press={() => alert("Logged In")} />
+                    <Btn
+                        textColor='white'
+                        bgColor={darkGreen}
+                        btnLabel="Login"
+                        Press={() => {
+                            alert("Logged In")
+                            props.navigation.navigate("GenderScreen")
+                        }
+                        } />
+
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: "center" }}>
                         <Text style={{
                             fontSize: 16,

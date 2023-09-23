@@ -5,15 +5,12 @@ import Btn from './Btn'
 import { darkGreen, green } from './Constants';
 const Home = (props) => {
   return (
-    <Background>
+    <Background source={require("./assets/nathan.jpg")} style={{height:'100%'}}>
         <View style={{marginHorizontal:40, marginVertical:150}}>
             <Text style={{color:'white', fontSize:64, fontWeight:'bold',marginBottom:100}}>
                 {/* Let's start */}
                 Fitness App
             </Text>
-            {/* <Text style={{color:'white', fontSize:64, marginBottom:40}}>
-                Coding
-            </Text> */}
             <Btn bgColor={green}  textColor='white' btnLabel="Login" Press ={() => props.navigation.navigate("Login")} />
             <Btn bgColor='white' textColor={darkGreen} btnLabel="Signup" Press ={() => props.navigation.navigate("Signup")} />
         </View>

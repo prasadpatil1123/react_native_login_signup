@@ -7,14 +7,16 @@ const Btn = ({bgColor, btnLabel, textColor, Press}) => {
     onPress={Press}
     style={{
         backgroundColor: bgColor,
-        borderRadius: 100,
+        borderRadius: 50,
+        borderColor:'black',
+        borderWidth:0.1,
         alignItems:'center',
-        width: 350,
-        paddingVerticsl:5,
-        marginVertical: 10,
+        width: '75%',
+        paddingVertical:5,
+        marginVertical: 13,
     }}
     >
-        <Text style={{color:textColor, fontSize:25, fontWeight:'bold'}}>
+        <Text style={{color:textColor, fontSize:25, fontWeight:'bold',}}>
             {btnLabel}
         </Text>
     </TouchableOpacity>

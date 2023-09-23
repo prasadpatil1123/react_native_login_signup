@@ -1,4 +1,4 @@
-import { View, Text, Touchable, TouchableOpacity,ScrollView } from 'react-native'
+import { View, Text, TouchableOpacity,ScrollView } from 'react-native'
 import React from 'react'
 import Background from './Background'
 import { darkGreen } from './Constants'
@@ -8,7 +8,7 @@ import Field from './Field';
 const Signup = (props) => {
     return (
         <Background>
-            <ScrollView>
+            
             <View style={{ alignItems: 'center', width: 460 }}>
                 <Text
                     style={{
@@ -102,12 +102,12 @@ const Signup = (props) => {
                             Already have an account ? {' '}
                         </Text>
                         <TouchableOpacity onPress={() => props.navigation.navigate("Login")}>
-                            <Text style={{ color: darkGreen, fontWeight: 'bold', fontSize: 16 }}>Login</Text>
+                            <Text style={{ color: darkGreen, fontWeight: 'bold', fontSize: 16,marginBottom:100 }}>Login</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
             </View>
-            </ScrollView>
+            
         </Background>
     );
 };

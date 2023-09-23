@@ -1,10 +1,10 @@
 import { View, ImageBackground } from 'react-native'
 import React from 'react'
 
-const Background = ({children}) => {
+const Background = ({source,children}) => {
   return (
     <View>
-        <ImageBackground source={require("./assets/nathan.jpg")} style={{height:'100%'}} />
+        <ImageBackground source={source} style={{height:'100%'}} />
         <View style={{position:'absolute'}}>
             {children}
         </View>
